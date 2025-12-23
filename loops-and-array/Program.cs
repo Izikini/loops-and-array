@@ -1,16 +1,5 @@
-﻿int[] tabela = new int[] { 15, 10, 15, 20, 25 };
-int min= tabela[0];
-int max= tabela[0];
-
-foreach (int liczba in tabela)
+﻿string[] imie = new string[] { "Jan", "Krzysztof", "Anna", "Maria" };
+for (int i = imie.Length - 1; i >= 0; i--) 
 {
-    if (liczba < min)
-    {
-        min = liczba;
-    }
-    if (liczba > max)
-    {
-        max = liczba;
-    }
+    Console.WriteLine(imie[i]);
 }
-Console.WriteLine($"Wartosc minamlna: {min}\nWartosc maxymalna {max}");
