@@ -89,8 +89,21 @@ class Program
             Console.WriteLine($"Liczba {liczba_szukana} nie znajduje sie w tablicy.");
         }
     }
+    static void Zadanie7()
+    {
+        int[] tablica = new int[] { 12, 4, 5, 1, 54, 20 };
+        for (int i = 0; i < tablica.Length / 2; i++)
+        {
+            int j = tablica.Length - 1 - i;
+            int temp = tablica[i];
+            tablica[i] = tablica[j];
+            tablica[j] = temp;
+            
+        }
+        Console.WriteLine($"Tablica B po operacji: {{ {string.Join(", ", tablica)} }}");
+    }
     static void Main(string[] args)
     {
-        Zadanie6();
+        Zadanie7();
     }
 }
