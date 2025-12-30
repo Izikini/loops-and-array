@@ -1,4 +1,4 @@
-﻿
+﻿using System.Reflection.Metadata.Ecma335;
 
 class Program
 {
@@ -58,8 +58,19 @@ class Program
         }
         Console.WriteLine($"Liczba parzystych: {ilosc_parzystych}\nLiczba nieparzystych: {ilosc_nieparzystych}");
     }
+    static void Zadanie5()
+    {
+        int[] tablica_a = { 1, 2, 3, 4, 5, 6, 7, 8 };
+        int[] tablica_b = new int[tablica_a.Length];
+        for (int i = 0; i < tablica_a.Length; i++)
+        {
+            tablica_b[i] = tablica_a[i] * 2;
+        }
+        Console.WriteLine($"Tablica A: {{ {string.Join(", ", tablica_a)} }}");
+        Console.WriteLine($"Tablica B po operacji: {{ {string.Join(", ", tablica_b)} }}");
+    }
     static void Main(string[] args)
     {
-        Zadanie4();
+        Zadanie5();
     }
 }
