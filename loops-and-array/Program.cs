@@ -60,7 +60,7 @@ class Program
     }
     static void Zadanie5()
     {
-        int[] tablica_a = { 1, 2, 3, 4, 5, 6, 7, 8 };
+        int[] tablica_a = new int[]{ 1, 2, 3, 4, 5, 6, 7, 8 };
         int[] tablica_b = new int[tablica_a.Length];
         for (int i = 0; i < tablica_a.Length; i++)
         {
@@ -69,8 +69,28 @@ class Program
         Console.WriteLine($"Tablica A: {{ {string.Join(", ", tablica_a)} }}");
         Console.WriteLine($"Tablica B po operacji: {{ {string.Join(", ", tablica_b)} }}");
     }
+    static void Zadanie6()
+    {
+        int[] tablica_liczb = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+        Console.WriteLine("Podaj liczbe ktora chcesz znalezc");
+        int liczba_szukana = int.Parse(Console.ReadLine());
+        bool znaleziono = false;
+        for (int i = 0; i < tablica_liczb.Length; i++)
+        {
+            if (tablica_liczb[i] == liczba_szukana)
+            {
+                Console.WriteLine($"Liczba {liczba_szukana} znajduje sie w tablicy na indeksie {i}");
+                znaleziono = true;
+                break;
+            }
+        }
+        if (!znaleziono)
+        {
+            Console.WriteLine($"Liczba {liczba_szukana} nie znajduje sie w tablicy.");
+        }
+    }
     static void Main(string[] args)
     {
-        Zadanie5();
+        Zadanie6();
     }
 }
