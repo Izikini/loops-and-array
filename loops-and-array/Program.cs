@@ -94,7 +94,7 @@ class Program
         int[] tablica = new int[] { 12, 4, 5, 1, 54, 20 };
         for (int i = 0; i < tablica.Length / 2; i++)
         {
-            int j = tablica.Length - 1 - i;
+            int j = tablica.Length - 1-i;
             int temp = tablica[i];
             tablica[i] = tablica[j];
             tablica[j] = temp;
